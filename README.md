@@ -8,6 +8,11 @@ ii) Open brackets must be closed in the correct order.
 Explanation:
 To solve the problem of the valid parentheses it will be helpful to use a **stack data structure**. we are comparing the first input with the last input
 
- Step 1: if s is empty return true, if the length of s is less than 2 return false.
- Step 2: An hash map that pairs the parentheses and helps to determine if the opening parentheses matches the closing parentheses
- step 3: declaration of an empty array stk
+ if s is empty return true, if the length of s is less than 2 return false.
+ the hash map pairs the parentheses and helps to determine if the opening parentheses matches the closing parentheses.
+ Each bracket is pushed into the array br and compared to the hash map. if the opening parentheses corresponds to the closing parentheses true is returned else return false
+ 
+ if(stk.length > 0){
+        return false; in a case where there is for example "((" brackets return false.
+        
+ The algorithm is O(n) and it takes O(n) memory
